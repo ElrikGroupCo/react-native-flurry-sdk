@@ -345,7 +345,7 @@ public class FlurryModule extends ReactContextBaseJavaModule {
         Map<String, String> result = new HashMap<>();
         while (iterator.hasNextKey()) {
             String key = iterator.nextKey();
-            result.put(key, readableMap.getString(key));
+            result.put(key, readableMap.getDynamic(key).toString());
         }
 
         return result;
